@@ -31,9 +31,9 @@ function guess() {
 
 function setHiddenFields() {
 	attempt = 0;
-	answer = Math.floor(Math.random() * (9999));
+	answer = Math.floor(Math.random() * 10000).toString();
 
-	while(answer.toString().length < 4){
+	while(answer.length < 4){
 		answer = '0' + answer;
 	}
 
@@ -59,10 +59,10 @@ function getResults(input) {
 	let results = document.getElementById('results');
 
 	for(i = 0; i < input.length; i++){
-		if(input.charAt(i) == answer.toString().charAt(i)) {
+		if(input.charAt(i) == answer.charAt(i)) {
 			container += '<span class="glyphicon glyphicon-ok"></span>';
 			correct++;
-		} else if (answer.toString().indexOf(input.toString().charAt(i)) > -1) {
+		} else if (answer.indexOf(input.charAt(i)) > -1) {
 			container += '<span class="glyphicon glyphicon-transfer"></span>';
 		} else {
 			container += '<span class="glyphicon glyphicon-remove"></span>';
