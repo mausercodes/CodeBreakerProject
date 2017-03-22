@@ -10,11 +10,9 @@ function guess() {
 
     if(!validateInput(input.value)) {
     	return false;
-    } 
-    if(validateInput(input.value)) {
+    } else {
     	attempt.value++;
     }
-
 
     var test = getResults(input.value);
     if(test) {
@@ -31,7 +29,7 @@ function guess() {
 }
 
 function setHiddenFields() {
-	attempt = 0;
+	attempt.value = 0;
 	answer.value = Math.floor(Math.random() * 10000).toString();
 
 	while(answer.length < 4){
