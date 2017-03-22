@@ -62,7 +62,7 @@ function getResults(input) {
 		if(input.charAt(i) == answer.value.charAt(i)) {
 			container += '<span class="glyphicon glyphicon-ok"></span>';
 			correct++;
-		} else if (answer.indexOf(input.charAt(i)) > -1) {
+		} else if (answer.value.indexOf(input.charAt(i)) > -1) {
 			container += '<span class="glyphicon glyphicon-transfer"></span>';
 		} else {
 			container += '<span class="glyphicon glyphicon-remove"></span>';
