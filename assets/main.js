@@ -32,7 +32,7 @@ function setHiddenFields() {
 	attempt.value = 0;
 	answer.value = Math.floor(Math.random() * 10000).toString();
 
-	while(answer.length < 4){
+	while(answer.value.length < 4){
 		answer.value = '0' + answer.value;
 	}
 
