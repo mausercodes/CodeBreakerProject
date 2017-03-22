@@ -59,7 +59,7 @@ function getResults(input) {
 	let results = document.getElementById('results');
 
 	for(i = 0; i < input.length; i++){
-		if(input.charAt(i) == answer.charAt(i)) {
+		if(input.charAt(i) == answer.value.charAt(i)) {
 			container += '<span class="glyphicon glyphicon-ok"></span>';
 			correct++;
 		} else if (answer.indexOf(input.charAt(i)) > -1) {
