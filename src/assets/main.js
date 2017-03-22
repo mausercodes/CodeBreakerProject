@@ -83,7 +83,7 @@ function getResults(input) {
 function showAnswer(winner) {
 	let code = document.getElementById('code');
 
-	code.innerHTML = '<strong>' + answer + '</strong>';
+	code.innerHTML = '<strong>' + answer.value + '</strong>';
 
 	if(winner) {
 		code.className += ' success';
